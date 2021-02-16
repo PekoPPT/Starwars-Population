@@ -1,4 +1,4 @@
-export default class Films {
+export default class Film {
   constructor(url) {
     this.url = url;
   }
