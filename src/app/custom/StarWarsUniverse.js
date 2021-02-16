@@ -44,7 +44,7 @@ export default class StarWarsUniverse extends EventEmitter {
         }
       });
       this.planet.addListener('populating_completed', function _onPopulationCompleted() {
-        that.films.push([...that.filmUrlsSet].map((url) => new Films(url)));
+        that.films.push(...[...that.filmUrlsSet].map((url) => new Films(url)));
         that.emit(StarWarsUniverse.events.UNIVERSE_POPULATED);
       });
 
